@@ -1,0 +1,30 @@
+%% 闭式求解的运算
+syms b1 b2 b3 b4 b5 b6 
+T1=[cos(b1) 0 -sin(b1) 0;
+    sin(b1) 0 cos(b1)  0;
+    0      -1  0      13;
+    0      0    0      1];
+T2=[cos(b2) -sin(b2) 0  8*cos(b2);
+    sin(b2) cos(b2)  0  8*sin(b2);
+    0      0    1      0;
+    0      0    0      1];
+T3=[cos(b3) 0 -sin(b3) 0;
+    sin(b3) 0 cos(b3)  0;
+    0      -1   0      -5;
+    0      0    0      1];
+T4=[cos(b4) 0 sin(b4)   0;
+    sin(b4) 0 -cos(b4)  0;
+    0      1    0       8;
+    0      0    0       1];
+T5=[cos(b5) 0 -sin(b5)   0;
+    sin(b5) 0  cos(b5)   0;
+    0      -1    0       0;
+    0      0    0       1];
+T6=[cos(b6) -sin(b6) 0 0;
+    sin(b6) cos(b6)  0 0;
+    0      0    1      6;
+    0      0    0      1];
+C=T4*T5*T6;
+B=T1*T2*T3*T4*T5*T6;
+A=T1*T2*T3;
+display(C);
